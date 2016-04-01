@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage - Yahtzee</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Yahtzee VDB</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Homepage <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Yahtzee</a></li>
+                <li class="active"><a href="rules.html">Regels</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wie zijn wij? <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Kelvin</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Harun</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Carlo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="scorebord">
+<table>
+    <thead>
+    <tr>
+        <th>Combinatie</th>
+        <th>Regel</th>
+        <th>Punten</th>
+        <th>Voorbeeld</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Three of a kind</th>
+        <td class="rule">Drie(of meer) dobbelstenen met hetzelfde nummer</td>
+        <td>Tel de dobbelstenen op</td>
+        <td><strong>5</strong>, 3, <strong>5</strong>, <strong>5</strong>, 1 =&gt; 19 punten</td>
+    </tr>
+    <tr>
+        <th>Four of a kind</th>
+        <td class="rule">Vier dobbelstenen met hetzelfde nummer</td>
+        <td>Tel de dobbelstenen op</td>
+        <td><strong>3</strong>, <strong>3</strong>, <strong>3</strong>, 5, <strong>3</strong> =&gt; 17 punten</td>
+    </tr>
+    <tr>
+        <th>Full House</th>
+        <td class="rule">Drie dobbelstenen met dezelfde waarde <strong>en</strong> de andere 2 dobbelstenen hebben dezelfde waarde (bv 2,2,3,3,3)</td>
+        <td>25 punten</td>
+        <td><strong>2</strong>, <strong>2</strong>, <strong>3</strong>, <strong>3</strong>, <strong>2</strong> =&gt; 25 punten</td>
+    </tr>
+    <tr>
+        <th>Small Straight</th>
+        <td class="rule">Tenminste vier van de dobbelstenen zijn ijn opeenvolgende numerieke volgorde</td>
+        <td>30 punten</td>
+        <td><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, 3 =&gt; 30 punten</td>
+    </tr>
+    <tr>
+        <th>Large Straight</th>
+        <td class="rule">Alle vijf de dobbelstenen zijn in opeenvolgende numerieke volgorde (De enige mogelijke combinaties zijn 1,2,3,4,5 en 2,3,4,5,6)</td>
+        <td>40 punten</td>
+        <td><strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong> =&gt; 40 punten</td>
+    </tr>
+    <tr>
+        <th>Yahtzee</th>
+        <td class="rule">Alle vijf dobbelstenen hebben dezelfde waarde (five of a kind)</td>
+        <td>50 punten</td>
+        <td><strong>2</strong>, <strong>2</strong>, <strong>2</strong>, <strong>2</strong>, <strong>2</strong> =&gt; 50 punten</td>
+    </tr>
+    <tr>
+        <th>Chance</th>
+        <td class="rule">Iedere combinatie</td>
+        <td>Tel de dobbelstenen op</td>
+        <td><strong>2</strong>, <strong>2</strong>, <strong>4</strong>, <strong>6</strong>, <strong>1</strong> =&gt; 15 punten</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <p class="navbar-text pull-left">© 2016 - Site built by Kelvin VDB, Harun and Carlo</p>
+    </div>
+
+
+</div><!-- /.footer -->
+
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/Yahtzee.js"></script>
+</body>
+</html>
