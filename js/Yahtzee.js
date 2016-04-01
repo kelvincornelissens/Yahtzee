@@ -1,12 +1,12 @@
-imageswitch = function(dice, block){
-    var een = "<img src=\"img/een.png\">";
-    var twee = "<img src=\"img/twee.png\">";
-    var drie = "<img src=\"img/drie.png\">";
-    var vier = "<img src=\"img/vier.png\">";
-    var vijf = "<img src=\"img/vijf.png\">";
-    var zes = "<img src=\"img/zes.png\">";
+imageswitch = function (dice, block, obj) {
+    var een = '<img src="img/een.png" onclick="' + obj + '.toggle++;">';
+    var twee = '<img src="img/twee.png" onclick="' + obj + '.toggle++;">';
+    var drie = '<img src="img/drie.png" onclick="' + obj + '.toggle++;">';
+    var vier = '<img src="img/vier.png" onclick="' + obj + '.toggle++;">';
+    var vijf = '<img src="img/vijf.png" onclick="' + obj + '.toggle++;">';
+    var zes = '<img src="img/zes.png" onclick="' + obj + '.toggle++;">';
 
-    switch(dice){
+    switch (dice) {
         case 1:
             document.getElementById(block).innerHTML = een;
             break;
@@ -26,45 +26,48 @@ imageswitch = function(dice, block){
             document.getElementById(block).innerHTML = zes;
             break;
         case "default":
-            alert(42);
+            alert(420);
             break;
     }
 };
-
-setTimeout(function(){
+Dice = function () {
+    this.value = 0;
+    this.toggle = 1;
+    this.Roll = function () {
+        this.value = this.toggle % 2 ? this.value : this.value = Math.round(Math.random() * Date().now()) % 6 + 1;
+    }
+};
+setTimeout(function () {
     var Button = document.getElementById("rollBtn");
     var count = 0;
-    r1=0,r2=0,r3=0,r4=0,r5=0;
+    var dices = [new Dice(), new Dice(), new Dice(), new Dice(), new Dice()];
+    Button.onclick = function () {
+        dices[0].Roll();
+        dices[1].Roll();
+        dices[2].Roll();
+        dices[3].Roll();
+        dices[4].Roll();
 
-    Button.onclick=function(){
-        var d = new Date();
-        var dice1 = Math.round(Math.random()* d.getTime())%6+1;
-        var dice2 = Math.round(Math.random()* d.getTime())%6+1;
-        var dice3 = Math.round(Math.random()* d.getTime())%6+1;
-        var dice4 = Math.round(Math.random()* d.getTime())%6+1;
-        var dice5 = Math.round(Math.random()* d.getTime())%6+1;
+        console.log(dices[0] + ' ' + dices[1] + ' ' + dices[2] + ' ' + dices[3] + ' ' + dices[4]);
 
-        console.log(dice1 + ' ' + dice2 + ' ' + dice3 + ' ' + dice4 + ' ' + dice5);
-
-        imageswitch(dice1,"block1");
-        imageswitch(dice2,"block2");
-        imageswitch(dice3,"block3");
-        imageswitch(dice4,"block4");
-        imageswitch(dice5,"block5");
+        imageswitch(dices[0].value, "block1", "dices[0]");
+        imageswitch(dices[1].value, "block2", "dices[1]");
+        imageswitch(dices[2].value, "block3", "dices[2]");
+        imageswitch(dices[3].value, "block4", "dices[3]");
+        imageswitch(dices[4].value, "block5", "dices[4]");
 
     };
 
-    $("#rollBtn").click(function(){
+    $("#rollBtn").click(function () {
             count++;
             console.log(count);
-            if(count === 3){
+        if (count === 3) {
                 $("#rollBtn").prop('disabled', true);
             }
         }
     );
 
 }, 0);
-
 
 
 // Behaalbare scores
@@ -76,7 +79,7 @@ valueFives = 50;
 valueSixes = 60;
 subtotal = valueAce + valueTwos + valueThrees + valueFours + valueFives + valueSixes;
 valueBonus = 0;
-if(subtotal > 63) valueBonus = 30;
+if (subtotal > 63) valueBonus = 30;
 
 valueThreeKind = 30;
 valueFourKind = 40;
