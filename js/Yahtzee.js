@@ -1,10 +1,10 @@
 imageswitch = function (dice, block, obj) {
-    var een = '<img src="img/een.png" onclick="' + obj + '.toggle++;">';
-    var twee = '<img src="img/twee.png" onclick="' + obj + '.toggle++;">';
-    var drie = '<img src="img/drie.png" onclick="' + obj + '.toggle++;">';
-    var vier = '<img src="img/vier.png" onclick="' + obj + '.toggle++;">';
-    var vijf = '<img src="img/vijf.png" onclick="' + obj + '.toggle++;">';
-    var zes = '<img src="img/zes.png" onclick="' + obj + '.toggle++;">';
+    var een = "<img src=\"img/een.png\" onclick=\"" + obj + ".toggle++;\">";
+    var twee = "<img src=\"img/twee.png\" onclick=\"" + obj + ".toggle++;\">";
+    var drie = "<img src=\"img/drie.png\" onclick=\"" + obj + ".toggle++;\">";
+    var vier = "<img src=\"img/vier.png\" onclick=\"" + obj + ".toggle++;\">";
+    var vijf = "<img src=\"img/vijf.png\" onclick=\"" + obj + ".toggle++;\">";
+    var zes = "<img src=\"img/zes.png\" onclick=\"" + obj + ".toggle++;\">";
 
     switch (dice) {
         case 1:
@@ -61,7 +61,7 @@ setTimeout(function () {
     $("#rollBtn").click(function () {
             count++;
             console.log(count);
-        if (count === 3) {
+            if (count === 3) {
                 $("#rollBtn").prop('disabled', true);
             }
         }
