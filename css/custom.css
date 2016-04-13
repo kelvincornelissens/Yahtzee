@@ -1,3 +1,10 @@
+.scorebord > table > tbody> tr > td#btn {
+    border: none;
+}
+
+.button {
+    border: none;
+}
 .scorebord > table > thead > tr > th{
     border-right: 1px solid black;
     padding-right: 5px;
