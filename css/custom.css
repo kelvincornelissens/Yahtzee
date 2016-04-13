@@ -1,11 +1,22 @@
-.scorebord > table > tbody> tr > td#btn {
+.scorebord > table > tbody > tr :nth-child(4) {
+    padding: 0;
     border: none;
 }
 
-.button {
+.scorebord > table > tbody > tr :nth-child(4) > button {
+    border-radius: 0;
     border: none;
 }
-.scorebord > table > thead > tr > th{
+
+.scorebord > table > tbody > tr :nth-child(4) > button:disabled {
+    background-color: darkgrey;
+}
+
+.scorebord > table > tbody > tr :nth-child(4) > button:hover {
+    background-color: lightgreen;
+}
+
+.scorebord > table > thead > tr > th {
     border-right: 1px solid black;
     padding-right: 5px;
     padding-left: 5px;
