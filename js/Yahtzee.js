@@ -48,7 +48,7 @@ setTimeout(function () {
         dices[3].Roll();
         dices[4].Roll();
 
-        console.log(dices[0] + ' ' + dices[1] + ' ' + dices[2] + ' ' + dices[3] + ' ' + dices[4]);
+        console.log(dices[0].value + ' ' + dices[1].value + ' ' + dices[2].value + ' ' + dices[3].value + ' ' + dices[4].value);
 
         imageswitch(dices[0].value, "block1", "dices[0]");
         imageswitch(dices[1].value, "block2", "dices[1]");
