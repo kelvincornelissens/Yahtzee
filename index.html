@@ -73,7 +73,7 @@
                 <td>Tel alleen alle 1 waardes op</td>
                 <td id="aces"></td>
                 <td>
-                    <button class="button" style="border-radius: 0;">Schrijf op</button>
+                    <button class="button" style="border-radius: 0;" onclick="Count.CountAce(Dices.array);">Schrijf op</button>
                 </td>
             </tr>
             <tr>
@@ -224,41 +224,30 @@
 
 <div class="col-md-6"></div>
 <div class="col-md-6">
-    <div class="col-md-1">
-        <div class="block" id="block1"></div>
-    </div>
-    <div class="col-md-1">
-        <div class="block" id="block2"></div>
-    </div>
-    <div class="col-md-1">
-        <div class="block" id="block3"></div>
-    </div>
-    <div class="col-md-1">
-        <div class="block" id="block4"></div>
-    </div>
-    <div class="col-md-1">
-        <div class="block" id="block5"></div>
+    <div class="col-md-12">
+        <img id="i1" height="100px" width="100px" src="img/0.png" onclick="Dices.array[0].willRoll++;"/>
+        <img id="i2" height="100px" width="100px" src="img/0.png" onclick="Dices.array[1].willRoll++;"/>
+        <img id="i3" height="100px" width="100px" src="img/0.png" onclick="Dices.array[2].willRoll++;"/>
+        <img id="i4" height="100px" width="100px" src="img/0.png" onclick="Dices.array[3].willRoll++;"/>
+        <img id="i5" height="100px" width="100px" src="img/0.png" onclick="Dices.array[4].willRoll++;"/>
+        <hr>
     </div>
     <br/>
-    <button type="button" class="btn btn-default btn-md" id="rollBtn">Klik</button>
+    <div class="col-md-3"></div>
+    <button type="button" class="btn btn-default btn-md" id="rollBtn" onclick="Dices.Roll();">Gooi</button>
+
 </div>
 
 
 
 <!-- /.Content -->
 
-<!-- Footer -->
-<div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-        <p class="navbar-text pull-left">© 2016 - Site built by Kelvin, Harun and Carlo</p>
-    </div>
 
-
-</div><!-- /.footer -->
 
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/Yahtzee.js"></script>
+<script src="js/Dice.js"></script>
+<script src="js/yahtzeevalidator.js"></script>
 </body>
 </html>
