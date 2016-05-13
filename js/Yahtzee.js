@@ -55,11 +55,13 @@ setTimeout(function () {
         imageswitch(dices[2].value, "block3", "dices[2]");
         imageswitch(dices[3].value, "block4", "dices[3]");
         imageswitch(dices[4].value, "block5", "dices[4]");
+        toggleButtons(dices);
 
     };
 
-    $("#rollBtn").click(function () {
+    document.getElementById("rollBtn").click(function () {
             count++;
+
             console.log(count);
             if (count === 3) {
                 $("#rollBtn").prop('disabled', true);
@@ -68,7 +70,20 @@ setTimeout(function () {
     );
 
 }, 0);
-
+function toggleButtons(da) {
+    document.getElementById("acebtn").disabled = Validator.isValidOne(da) ? false : true;
+    document.getElementById("twobtn").disabled = Validator.isValidTwo(da) ? false : true;
+    document.getElementById("threebtn").disabled = Validator.isValidThree(da) ? false : true;
+    document.getElementById("fourbtn").disabled = Validator.isValidFour(da) ? false : true;
+    document.getElementById("fivebtn").disabled = Validator.isValidFive(da) ? false : true;
+    document.getElementById("sixes").disabled = Validator.isValidSix(da) ? false : true;
+    document.getElementById("threeofakindbtn").disabled = Validator.isValidThreeOfAKind(da) ? false : true;
+    document.getElementById("fourofakindbtn").disabled = Validator.isValidFourOfAKind(da) ? false : true;
+    document.getElementById("fullhousebtn").disabled = Validator.isValidFullHouse(da) ? false : true;
+    document.getElementById("smallstraightbtn").disabled = Validator.isValidSmallStraight(da) ? false : true;
+    document.getElementById("largestraightbtn").disabled = Validator.isValidLargeStraight(da) ? false : true;
+    document.getElementById("yahtzeebtn").disabled = Validator.isValidYahtzee(da) ? false : true;
+}
 
 // Behaalbare scores
 valueAce = 10;

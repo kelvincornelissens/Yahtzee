@@ -1,60 +1,60 @@
 Count = {
-    CountAce: new function (DiceArray) {
-        Score = 0;
+    CountAce: function (DiceArray) {
+        var Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 1){
-                Score+1;
+                Score+=1;
                 document.getElementById("aces").innerHTML = Score;
                 return Score;
             }
         }
     },
-    CountTwo: new function (DiceArray) {
+    CountTwo: function (DiceArray) {
         Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 2){
-                Score+2;
+                Score+=2;
                 return Score;
             }
         }
     },
-    CountThree: new function (DiceArray) {
+    CountThree: function (DiceArray) {
         Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 3){
-                Score+3;
+                Score+=3;
                 return Score;
             }
         }
     },
-    CountFour: new function (DiceArray) {
+    CountFour: function (DiceArray) {
         Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 4){
-                Score+4;
+                Score+=4;
                 return Score;
             }
         }
     },
-    CountFive: new function (DiceArray) {
+    CountFive: function (DiceArray) {
         Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 5){
-                Score+5;
+                Score+=5;
                 return Score;
             }
         }
     },
-    CountSix: new function (DiceArray) {
+    CountSix: function (DiceArray) {
         Score = 0;
         for(i = 0; i < DiceArray.length; i++){
             if(DiceArray[i].value === 6){
-                Score+6;
+                Score+=6;
                 return Score;
             }
         }
     }
-}
+};
 
 
 
