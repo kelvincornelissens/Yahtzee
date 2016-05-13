@@ -20,33 +20,7 @@ Dices = {
         document.getElementById("i3").src = "img/" + Dices.array[2].value + ".png";
         document.getElementById("i4").src = "img/" + Dices.array[3].value + ".png";
         document.getElementById("i5").src = "img/" + Dices.array[4].value + ".png";
-        
-    },
-    Yahtzee: function () {
-        console.log("begin");
-        setTimeout(function () {
-                w = 0;
-                Dices.Roll();
-                w++;
-                while (
-                    !(
-                        Dices.array[0].value == Dices.array[1].value &&
-                        Dices.array[1].value == Dices.array[2].value &&
-                        Dices.array[2].value == Dices.array[3].value &&
-                        Dices.array[3].value == Dices.array[4].value
-                    )
-                    ) {
-                    Dices.Roll();
-                    w++;
-                }
-                document.getElementById("i1").src = Dices.array[0].value + ".png";
-                document.getElementById("i2").src = Dices.array[1].value + ".png";
-                document.getElementById("i3").src = Dices.array[2].value + ".png";
-                document.getElementById("i4").src = Dices.array[3].value + ".png";
-                document.getElementById("i5").src = Dices.array[4].value + ".png";
-                setTimeout(console.log("end " + Dices.array[0].value + " | " + w + "w"), 0);
-            }
-            , 0);
+        toggleButtons(Validator.diceArrayToIntArray(this.array));
     },
     Validate: function (DiceArray) {
         if(Validator.isValidFullHouse(DiceArray)){
@@ -58,3 +32,18 @@ Dices = {
     }
 };
 for (i = 0; i < 5; i++)Dices.array[i] = new Dice(i + 1);
+
+function toggleButtons(da) {
+    document.getElementById("acebtn").disabled = Validator.isValidOne(da) ? false : true;
+    document.getElementById("twobtn").disabled = Validator.isValidTwo(da) ? false : true;
+    document.getElementById("threebtn").disabled = Validator.isValidThree(da) ? false : true;
+    document.getElementById("fourbtn").disabled = Validator.isValidFour(da) ? false : true;
+    document.getElementById("fivebtn").disabled = Validator.isValidFive(da) ? false : true;
+    document.getElementById("sixbtn").disabled = Validator.isValidSix(da) ? false : true;
+    document.getElementById("threeofakindbtn").disabled = Validator.isValidThreeOfAKind(da) ? false : true;
+    document.getElementById("fourofakindbtn").disabled = Validator.isValidFourOfAKind(da) ? false : true;
+    document.getElementById("fullhousebtn").disabled = Validator.isValidFullHouse(da) ? false : true;
+    document.getElementById("smallstraightbtn").disabled = Validator.isValidSmallStraight(da) ? false : true;
+    document.getElementById("largestraightbtn").disabled = Validator.isValidLargeStraight(da) ? false : true;
+    document.getElementById("yahtzeebtn").disabled = Validator.isValidYahtzee(da) ? false : true;
+}
