@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3beb1c9f-f53e-4044-8890-89c728cfc48a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/yahtzeevalidator.js" afterPath="$PROJECT_DIR$/js/yahtzeevalidator.js" />
     </list>
     <ignored path="Yahtzee.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -406,7 +404,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463735963188</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Crack aan het roken in de buurt met Kelvin Cornelissen">
+      <created>1463736892634</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1463736892634</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -455,7 +459,8 @@
     <MESSAGE value="1 regex replace later..." />
     <MESSAGE value="added 1 space" />
     <MESSAGE value="Crack aan het roken in de buurt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crack aan het roken in de buurt" />
+    <MESSAGE value="Crack aan het roken in de buurt met Kelvin Cornelissen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crack aan het roken in de buurt met Kelvin Cornelissen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
