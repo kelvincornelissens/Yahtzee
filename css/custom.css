@@ -22,14 +22,14 @@
     padding-left: 5px;
 }
 
-body > div.scorebord > table > tbody > tr > td {
+div.scorebord > table > tbody > tr > td {
     border-right: 1px solid black;
     border-top: 1px solid black;
     padding-right: 5px;
     padding-left: 5px;
 }
 
-body > div.scorebord > table > tbody > tr > th {
+div.scorebord > table > tbody > tr > th {
     border-right: 1px solid black;
     border-top: 1px solid black;
     padding-right: 5px;
