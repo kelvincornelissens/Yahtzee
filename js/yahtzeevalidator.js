@@ -27,14 +27,19 @@ Validator = {
         return dices[0] == val || dices[1] == val || dices[2] == val || dices[3] == val || dices[4] == val;
     },
     isValidThreeOfAKind: function (dices) {
+        console.log('3ofakind');
+        console.log(dices);
         var val = 2;
         var same = [0, 0, 0, 0, 0, 0];
-        same[dices[0]]++;
-        same[dices[1]]++;
-        same[dices[2]]++;
-        same[dices[3]]++;
-        same[dices[4]]++;
-        return same[0] > val || same[1] > val || same[2] > val || same[3] > val || same[4] > val || same[5] > val;
+        same[dices[0] - 1]++;
+        same[dices[1] - 1]++;
+        same[dices[2] - 1]++;
+        same[dices[3] - 1]++;
+        same[dices[4] - 1]++;
+        console.log(same);
+        var result = same[0] > val || same[1] > val || same[2] > val || same[3] > val || same[4] > val || same[5] > val;
+        console.log(result);
+        return result;
     },
     isValidFourOfAKind: function (dices) {
         var val = 3;
@@ -69,7 +74,7 @@ Validator = {
         same[dices[2] - 1]++;
         same[dices[3] - 1]++;
         same[dices[4] - 1]++;
-        return (same[2]>0&&same[3]>0)&&((same[0]>0&&same[1]>0)||(same[1]>0&&same[4]>0)||(same[4]>0&&same[5]>0));
+        return (same[2] > 0 && same[3] > 0) && ((same[0] > 0 && same[1] > 0) || (same[1] > 0 && same[4] > 0) || (same[4] > 0 && same[5] > 0));
     },
     isValidLargeStraight: function (dices) {
         var same = [0, 0, 0, 0, 0, 0];
