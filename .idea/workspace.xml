@@ -4,6 +4,8 @@
     <list default="true" id="3beb1c9f-f53e-4044-8890-89c728cfc48a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Dice.js" afterPath="$PROJECT_DIR$/js/Dice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/custom.js" afterPath="$PROJECT_DIR$/js/custom.js" />
     </list>
     <ignored path="Yahtzee.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="203" column="96" selection-start-line="203" selection-start-column="96" selection-end-line="203" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -39,8 +51,18 @@
       <file leaf-file-name="yahtzeevalidator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/yahtzeevalidator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="-759">
               <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dice.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Dice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -68,12 +90,12 @@
         <option value="$PROJECT_DIR$/stuff/yahtzeevalidator.js" />
         <option value="$PROJECT_DIR$/stuff/index.html" />
         <option value="$PROJECT_DIR$/stuff/Dice.js" />
-        <option value="$PROJECT_DIR$/js/Dice.js" />
         <option value="$PROJECT_DIR$/rules.html" />
         <option value="$PROJECT_DIR$/js/Yahtzee.js" />
-        <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/js/yahtzeevalidator.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/custom.js" />
+        <option value="$PROJECT_DIR$/js/Dice.js" />
       </list>
     </option>
   </component>
@@ -324,7 +346,7 @@
       <workItem from="1463129569444" duration="6626000" />
       <workItem from="1463553419078" duration="167000" />
       <workItem from="1463553973483" duration="1257000" />
-      <workItem from="1464161177711" duration="71000" />
+      <workItem from="1464161177711" duration="457000" />
     </task>
     <task id="LOCAL-00001" summary="grammar fix">
       <created>1460106391036</created>
@@ -368,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464161181688</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Nog steeds te weinig jQuery">
+      <created>1464161256112</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1464161256112</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18219000" />
+    <option name="totallyTimeSpent" value="18605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -734,14 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Dice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Yahtzee.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -750,26 +771,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="203" column="96" selection-start-line="203" selection-start-column="96" selection-end-line="203" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="175">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/yahtzeevalidator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="-759">
           <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/Dice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+        <state relative-caret-position="715">
+          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
           <folding />
         </state>
       </provider>

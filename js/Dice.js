@@ -55,17 +55,12 @@ function toggleButtons(da) {
     document.getElementById("yahtzeebtn").style.visibility = document.getElementById("yahtzeeScore").innerHTML.length == 0 ? 'visible' : 'hidden';
 }
 function resetDices(){
-    Dices = {
-        array: [],
-        Roll: function () {
-            for (var i = 0; i < 5; i++)if (Dices.array[i].willRoll % 2)Dices.array[i].Roll();
-            document.getElementById("i1").src = "img/" + Dices.array[0].value + ".png";
-            document.getElementById("i2").src = "img/" + Dices.array[1].value + ".png";
-            document.getElementById("i3").src = "img/" + Dices.array[2].value + ".png";
-            document.getElementById("i4").src = "img/" + Dices.array[3].value + ".png";
-            document.getElementById("i5").src = "img/" + Dices.array[4].value + ".png";
-            toggleButtons(Validator.diceArrayToIntArray(this.array));
-        }
-    };
+    for (i = 0; i < 5; i++)Dices.array[i] = new Dice(i + 1);
+    document.getElementById("i1").src = "img/0.png";
+    document.getElementById("i2").src = "img/0.png";
+    document.getElementById("i3").src = "img/0.png";
+    document.getElementById("i4").src = "img/0.png";
+    document.getElementById("i5").src = "img/0.png";
     rolls=0;
+    document.getElementById('rollBtn').disabled=false;
 }

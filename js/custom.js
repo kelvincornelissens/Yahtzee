@@ -4,8 +4,8 @@ var TotalScore = 0;
 Count = {
     CountAce: function (DiceArray) {
         var Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 1){
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 1) {
                 Score++;
             }
 
@@ -17,14 +17,14 @@ Count = {
 
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
-
+        resetDices();
         return Score;
     },
     CountTwo: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 2){
-                Score+=2;
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 2) {
+                Score += 2;
 
             }
         }
@@ -36,13 +36,14 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountThree: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 3){
-                Score+=3;
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 3) {
+                Score += 3;
 
             }
         }
@@ -54,13 +55,14 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountFour: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 4){
-                Score+=4;
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 4) {
+                Score += 4;
 
             }
         }
@@ -71,13 +73,14 @@ Count = {
 
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
+        resetDices();
         return Score;
     },
     CountFive: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 5){
-                Score+=5;
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 5) {
+                Score += 5;
             }
         }
         document.getElementById("fives").innerHTML = Score;
@@ -88,13 +91,14 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountSix: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
-            if(DiceArray[i].value === 6){
-                Score+=6;
+        for (i = 0; i < DiceArray.length; i++) {
+            if (DiceArray[i].value === 6) {
+                Score += 6;
             }
         }
         document.getElementById("sixes").innerHTML = Score;
@@ -105,12 +109,13 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountThreeOfAKind: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidThreeOfAKind(Validator.diceArrayToIntArray(DiceArray))){
-            for(i = 0; i < DiceArray.length; i++){
+        if (Validator.isValidThreeOfAKind(Validator.diceArrayToIntArray(DiceArray))) {
+            for (i = 0; i < DiceArray.length; i++) {
                 Score += DiceArray[i].value;
             }
         }
@@ -119,12 +124,13 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountFourOfAKind: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidFourOfAKind(Validator.diceArrayToIntArray(DiceArray))){
-            for(i = 0; i < DiceArray.length; i++){
+        if (Validator.isValidFourOfAKind(Validator.diceArrayToIntArray(DiceArray))) {
+            for (i = 0; i < DiceArray.length; i++) {
                 Score += DiceArray[i].value;
             }
         }
@@ -133,11 +139,12 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountFullHouse: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidFullHouse(Validator.diceArrayToIntArray(DiceArray))){
+        if (Validator.isValidFullHouse(Validator.diceArrayToIntArray(DiceArray))) {
             Score = 25;
         }
         document.getElementById("fullhouse").innerHTML = Score;
@@ -145,11 +152,12 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountSmallStraight: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidSmallStraight(Validator.diceArrayToIntArray(DiceArray))){
+        if (Validator.isValidSmallStraight(Validator.diceArrayToIntArray(DiceArray))) {
             Score = 30;
         }
         document.getElementById("smallStraight").innerHTML = Score;
@@ -157,11 +165,12 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountLargeStraight: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidLargeStraight(Validator.diceArrayToIntArray(DiceArray))){
+        if (Validator.isValidLargeStraight(Validator.diceArrayToIntArray(DiceArray))) {
             Score = 40;
         }
         document.getElementById("largeStraight").innerHTML = Score;
@@ -169,11 +178,12 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountYahtzee: function (DiceArray) {
         Score = 0;
-        if(Validator.isValidYahtzee(Validator.diceArrayToIntArray(DiceArray))){
+        if (Validator.isValidYahtzee(Validator.diceArrayToIntArray(DiceArray))) {
             Score = 50;
         }
         document.getElementById("yahtzeeScore").innerHTML = Score;
@@ -181,18 +191,20 @@ Count = {
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
 
+        resetDices();
         return Score;
     },
     CountChance: function (DiceArray) {
         Score = 0;
-        for(i = 0; i < DiceArray.length; i++){
+        for (i = 0; i < DiceArray.length; i++) {
             Score += DiceArray[i].value;
         }
         document.getElementById("chance").innerHTML = Score;
 
         TotalScore += Score;
         document.getElementById("total").innerHTML = TotalScore;
-        
+
+        resetDices();
         return Score;
     }
 };
