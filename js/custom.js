@@ -1,3 +1,6 @@
+var TotalUpper = 0;
+var TotalScore = 0;
+
 Count = {
     CountAce: function (DiceArray) {
         var Score = 0;
@@ -8,6 +11,13 @@ Count = {
 
         }
         document.getElementById("aces").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountTwo: function (DiceArray) {
@@ -19,6 +29,13 @@ Count = {
             }
         }
         document.getElementById("twos").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountThree: function (DiceArray) {
@@ -30,6 +47,13 @@ Count = {
             }
         }
         document.getElementById("threes").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountFour: function (DiceArray) {
@@ -41,6 +65,12 @@ Count = {
             }
         }
         document.getElementById("fours").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
         return Score;
     },
     CountFive: function (DiceArray) {
@@ -51,6 +81,13 @@ Count = {
             }
         }
         document.getElementById("fives").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountSix: function (DiceArray) {
@@ -61,6 +98,13 @@ Count = {
             }
         }
         document.getElementById("sixes").innerHTML = Score;
+
+        TotalUpper += Score;
+        document.getElementById("totalUpper").innerHTML = TotalUpper;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountThreeOfAKind: function (DiceArray) {
@@ -71,6 +115,10 @@ Count = {
             }
         }
         document.getElementById("threekind").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountFourOfAKind: function (DiceArray) {
@@ -81,6 +129,10 @@ Count = {
             }
         }
         document.getElementById("fourkind").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountFullHouse: function (DiceArray) {
@@ -89,6 +141,10 @@ Count = {
             Score = 25;
         }
         document.getElementById("fullhouse").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountSmallStraight: function (DiceArray) {
@@ -97,6 +153,10 @@ Count = {
             Score = 30;
         }
         document.getElementById("smallStraight").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountLargeStraight: function (DiceArray) {
@@ -105,6 +165,10 @@ Count = {
             Score = 40;
         }
         document.getElementById("largeStraight").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountYahtzee: function (DiceArray) {
@@ -113,6 +177,10 @@ Count = {
             Score = 50;
         }
         document.getElementById("yahtzeeScore").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+
         return Score;
     },
     CountChance: function (DiceArray) {
@@ -121,6 +189,10 @@ Count = {
             Score += DiceArray[i].value;
         }
         document.getElementById("chance").innerHTML = Score;
+
+        TotalScore += Score;
+        document.getElementById("total").innerHTML = TotalScore;
+        
         return Score;
     }
 };
