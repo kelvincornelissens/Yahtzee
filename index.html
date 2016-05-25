@@ -7,7 +7,6 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/custom.css" rel="stylesheet" />
-
 </head>
 <body>
 
@@ -201,7 +200,7 @@
                 <td>Tel alle waardes op</td>
                 <td id="chance"></td>
                 <td>
-                    <button id="chancebtn" class="button" style="border-radius: 0;" onclick="Count.CountChance(Dices.array);">Schrijf op</button>
+                    <button id="chancebtn" class="button" style="border-radius: 0;" onclick="Count.CountChance(Dices.array);this.disabled=true;">Schrijf op</button>
                 </td>
             </tr>
             <tr>
@@ -234,7 +233,7 @@
     </div>
     <br/>
     <div class="col-md-3"></div>
-    <button type="button" class="btn btn-default btn-md" id="rollBtn" onclick="Dices.Roll();">Gooi</button>
+    <button type="button" class="btn btn-default btn-md" id="rollBtn" onclick="Dices.Roll();rolls++;">Gooi</button>
 
 </div>
 
